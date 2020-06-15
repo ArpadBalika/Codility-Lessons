@@ -1,7 +1,7 @@
 #include <vector>
 #include <stack>
 
-void bigFishEatsSmallFish(size_t i, std::stack<int>& aliveSize, std::stack<int>& aliveDir, std::vector<int>& A, std::vector<int>& B)
+void bigFishEatsSmallFish(size_t i, std::stack<int>& aliveSize, std::stack<int>& aliveDir, std::vector<int>& A, std::vector<int>& B) noexcept
 {
 	if (aliveSize.empty() || aliveDir.top() == B[i] || aliveDir.top() == 0)
 	{
@@ -17,7 +17,7 @@ void bigFishEatsSmallFish(size_t i, std::stack<int>& aliveSize, std::stack<int>&
 }
 
 // Recursive solution. Detected time complexity: O(N)
-int solution(std::vector<int>& A, std::vector<int>& B)
+int solution(std::vector<int>& A, std::vector<int>& B) noexcept
 {
 	std::stack<int> aliveSize;
 	std::stack<int> aliveDir;
